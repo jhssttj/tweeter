@@ -28,13 +28,12 @@ body {
 main {
   width:90%;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
   background-color: #f4f1ec;
+  margin: 0 auto;
 }
 
 
  
 
 
- /*Tempplace holder for Bungee font font-family: 'Bungee', cursive;*/
