@@ -7,7 +7,7 @@ header {
   flex-direction: column;
   background-color: orange;
   background-image: url("/images/pingu-background.jpg");
-  background-size: cover;
+  background-size: 1250px 600px;
 }
 
 header img {
