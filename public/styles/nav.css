@@ -20,3 +20,7 @@ nav Span {
 .NavTitle {
   font-family: 'Bungee', cursive;
 }
+
+.fa-angles-down {
+color: red;
+}
