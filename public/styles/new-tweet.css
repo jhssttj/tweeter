@@ -1,4 +1,9 @@
-main form {
+main {
+  display: flex;
+  flex-direction:column;
+}
+
+main section {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

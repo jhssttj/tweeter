@@ -35,7 +35,7 @@
       </span>
     </nav>
     <!-- Header area to display profile account-->
-    <header >
+    <header>
       <div>
           <img src="/images/nootnoot.jpg"> 
       </div>
@@ -47,6 +47,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <!--The section below is the form for creating new tweets-->
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action = '/tweets' method = 'POST' >
@@ -57,6 +58,22 @@
             <output name="counter" id = "char_count" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <!-- The section below is where posted tweets will be posted to-->
+      <section>
+        <article>
+          <header class = "PostedTweets">
+            <img src="/images/nootnoot.jpg"> 
+            Placeholder (Name and pic goes here?)
+          </header>
+          <p>The actual tweet post goes here</p>
+          <footer> 
+            Date posted and Icons
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </footer>
+        </article>
       </section>
     </main>
   </body>
