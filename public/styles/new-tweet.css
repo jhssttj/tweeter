@@ -8,13 +8,34 @@ main section {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  height:100%;
 }
 
-main textarea {
+main form  {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  height:100%;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main section h2 {
+  width:100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+main form textarea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
   border-bottom: 3px solid #545149;
   background-color: transparent;
-  width:700px;
+  width:100%;
 }
 
 main form div {
