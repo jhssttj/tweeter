@@ -8,9 +8,10 @@ $(document).ready(function() {
     charCount.text(maxLength);
     //If word limit goes down to negative. Change font color to red
     if (maxLength < 0) {
-      charCount.css({ 'color'  : 'red'});
+      // charCount.css({ 'color'  : 'red'});
+      charCount.attr('class', 'warningColor');
     } else if (maxLength > 0) {
-      charCount.css({ 'color'  : '#545149'});
+      charCount.attr('class', 'counter');
     }
   })  
 });

@@ -49,3 +49,7 @@ main form button {
   padding: 5px;
   text-align: center;
 }
+
+.warningColor {
+  color: red;
+}
