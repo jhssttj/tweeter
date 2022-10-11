@@ -3,9 +3,8 @@ $(document).ready(function() {
   let tweetText = $("#tweet-text");
   tweetText.on("input", function () {
     let charCount = $("#char_count");
-    let limitText = 140;
     const tweetLength = $(this).val().length;
-    let maxLength = limitText - tweetLength;
+    let maxLength = 140 - tweetLength;
     charCount.text(maxLength);
     //If word limit goes down to negative. Change font color to red
     if (maxLength < 0) {
