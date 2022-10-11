@@ -30,8 +30,11 @@ article footer span {
 }
 
 article header h3.atName {
+  display: flex;
+  justify-content: flex-end;
   font-weight: normal;
-
+  width: 100%;
+  margin: 1%;
 }
 
 article footer span i:hover {
