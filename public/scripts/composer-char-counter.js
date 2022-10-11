@@ -12,7 +12,6 @@ $(document).ready(function() {
       charCount.css({ 'color'  : 'red'});
     } else if (maxLength > 0) {
       charCount.css({ 'color'  : '#545149'});
-
     }
   })  
 });
