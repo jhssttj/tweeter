@@ -39,4 +39,5 @@ article header h3.atName {
 
 article footer span i:hover {
   color:red;
+  cursor: pointer;
 }
