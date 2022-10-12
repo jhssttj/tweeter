@@ -62,6 +62,7 @@ $(document).ready(function() {
     event.preventDefault();
     const newTweet = $('#tweetForm').serialize();
     let tweetLength = $(this).find('textarea').val().length;
+    const charCount = $(this).parent().find('.counter');
     $('.error').hide();
     if (!tweetLength) {
       return $('#error_empty').slideDown();

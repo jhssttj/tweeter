@@ -29,6 +29,9 @@
   </head>
 
   <body>
+    <button id = "scrollToTop">
+      <i class="fa-solid fa-circle-arrow-up"></i>
+    </button>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class = "NavTitle">tweeter</span>
@@ -46,11 +49,10 @@
           <h2>Pingu</h2>
       </div>
   </header>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
       <!--The section below is the form for creating new tweets-->
-      <section class="new-tweet">
+      <section class="new-tweet" id = "scrollTop">
         <span class = "error" id = "error_empty">
           <i class="fas fa-exclamation-triangle" style= "color: red"></i>
           Cannot post: Post cannot be empty

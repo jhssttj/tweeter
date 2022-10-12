@@ -13,6 +13,15 @@ $(document).ready(function() {
     } else if (maxLength > 0) {
       charCount.removeClass('warningColor');
     }
-  })  
+  })
+  
+  let scrollToTop = $('#scrollToTop');
+  scrollToTop.click(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    })
+  })
 });
 
