@@ -11,6 +11,7 @@ const tweetData = {
   "created_at": 1461116232227
 }
 
+//Function to return article template for newly posted tweets
 createTweetElement = (tweetData) => {
   let renderPost = (`
   <section>
