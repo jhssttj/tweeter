@@ -50,6 +50,13 @@ $(document).ready(function() {
   $( "#tweetForm" ).submit(function( event ) {
     event.preventDefault();
     const newTweet = $('#tweetForm').serialize();
+    let tweetLength = $(this).find('textarea').val().length;
+    if (!tweetLength) {
+      return alert("Cannot post: Post cannot be empty");
+    }
+    if (tweetLength > 140) {
+      return alert("Cannot post: Post exceeds 140 text limit");
+    }
 
     $.ajax({
       method: 'POST',
