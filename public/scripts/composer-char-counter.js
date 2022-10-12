@@ -15,13 +15,28 @@ $(document).ready(function() {
     }
   })
   
+
+
   let scrollToTop = $('#scrollToTop');
+  let navTemplate = $('nav');
+  scrollToTop.hide();
+  $(window).scroll(() => {
+    if (window.scrollY > 0) {
+      scrollToTop.fadeIn();
+      navTemplate.slideUp();
+    } else {
+      scrollToTop.fadeOut();
+      navTemplate.slideDown();
+
+    }
+  })
   scrollToTop.click(() => {
     window.scrollTo({
       top: 0,
       left: 0,
       behavior: "smooth"
     })
+
   })
 });
 
