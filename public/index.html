@@ -51,6 +51,14 @@
     <main class="container">
       <!--The section below is the form for creating new tweets-->
       <section class="new-tweet">
+        <span class = "error" id = "error_empty">
+          <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+          Cannot post: Post cannot be empty
+        </span>
+        <span class = "error" id = "error_over">
+          <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+          Cannot post: Post exceeds 140 text limit
+        </span>
         <h2>Compose Tweet</h2>
         <form id = "tweetForm" action = '/tweets' method = 'POST' >
           <label for="tweet-text"></label>

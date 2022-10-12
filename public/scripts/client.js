@@ -22,6 +22,9 @@ $(document).ready(function() {
     return $tweet;
   };
 
+  //Initially hide error message for tweet word limit
+  $('.error').hide();
+
   //Function to take array of tweets and render them using the createTweetElement function
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
@@ -58,11 +61,12 @@ $(document).ready(function() {
     event.preventDefault();
     const newTweet = $('#tweetForm').serialize();
     let tweetLength = $(this).find('textarea').val().length;
+    $('.error').hide();
     if (!tweetLength) {
-      return alert("Cannot post: Post cannot be empty");
+      return $('#error_empty').slideDown();
     }
     if (tweetLength > 140) {
-      return alert("Cannot post: Post exceeds 140 text limit");
+      return $('#error_over').slideDown();
     }
 
     $.ajax({

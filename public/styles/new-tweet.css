@@ -53,3 +53,10 @@ main form button {
 .warningColor {
   color: red;
 }
+
+.error {
+  margin: 2%;
+  border: 3px solid red;
+  color: red;
+  font-weight: bold;
+}
