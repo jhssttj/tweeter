@@ -1,30 +1,4 @@
 $(document).ready(function() {
-  // Array of tweet datas
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
-
   //Function to render individual tweet into the article template
   const createTweetElement = function (tweet) {
     const $tweet = $(`
@@ -56,6 +30,38 @@ $(document).ready(function() {
     }
   };
 
-  //Render the tweets using desired array of tweets
-  renderTweets(data);
+  //Function to load all the tweet in our database
+  const loadtweets = function () {
+    $.ajax({
+      method: 'GET',
+      url: '/tweets',
+    })
+    .then ((tweets) => {
+      renderTweets(tweets.reverse());
+    })
+    .catch((error) => {
+      console.log ('ERROR:', error);
+    })
+  };
+
+  loadtweets();
+
+  //Ajax: Put posted tweet into server once submitted
+  $( "#tweetForm" ).submit(function( event ) {
+    event.preventDefault();
+    const newTweet = $('#tweetForm').serialize();
+
+    $.ajax({
+      method: 'POST',
+      url: '/tweets',
+      data: newTweet
+    })
+    .then (() => {
+      $("#tweets-container").empty();
+      loadtweets();
+    })
+    .catch((error) => {
+      console.log ('ERROR:', error);
+    })
+  }); 
 });
