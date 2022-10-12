@@ -24,6 +24,7 @@ $(document).ready(function() {
 
   //Initially hide error message for tweet word limit
   $('.error').hide();
+  $('.new-tweet').hide();
 
   //Function to take array of tweets and render them using the createTweetElement function
   const renderTweets = function(tweets) {
@@ -82,5 +83,10 @@ $(document).ready(function() {
       console.log ('ERROR:', error);
     })
     $(this).find('textarea').val('');
+  }); 
+
+  //Ajax: Click on icon slides the new tweer header up and down
+  $(".fa-angles-down").click(() => {
+    $('.new-tweet').slideToggle();
   }); 
 });

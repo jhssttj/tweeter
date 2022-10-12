@@ -25,3 +25,8 @@ nav Span {
 .fa-angles-down {
 color: red;
 }
+
+.fa-angles-down:hover {
+  color:blue;
+  cursor: pointer;
+}
