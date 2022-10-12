@@ -1,18 +1,32 @@
 $(document).ready(function() {
-  // Object of tweet datas
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
+  // Array of tweet datas
+  const data = [
+    {
+      "user": {
+        "name": "Newton",
+        "avatars": "https://i.imgur.com/73hZDYK.png"
+        ,
         "handle": "@SirIsaac"
       },
-    "content": {
+      "content": {
         "text": "If I have seen further it is by standing on the shoulders of giants"
       },
-    "created_at": 1461116232227
-  };
+      "created_at": 1461116232227
+    },
+    {
+      "user": {
+        "name": "Descartes",
+        "avatars": "https://i.imgur.com/nlhLi3I.png",
+        "handle": "@rd" },
+      "content": {
+        "text": "Je pense , donc je suis"
+      },
+      "created_at": 1461113959088
+    }
+  ]
 
-  createTweetElement = function (tweet) {
+  //Function to render individual tweet into the article template
+  const createTweetElement = function (tweet) {
     const $tweet = $(`
     <article>
     <header class = "PostedTweets">
@@ -34,10 +48,14 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  const $tweet = createTweetElement(tweetData);
-
-  // Test / driver code (temporary)
-  console.log('test123131')
-  console.log($tweet); // to see what it looks like
-  $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  //Function to take array of tweets and render them using the createTweetElement function
+  const renderTweets = function(tweets) {
+    for (const tweet of tweets) {
+      const $tweet = createTweetElement(tweet);
+      $('#tweets-container').append($tweet)
+    }
+  };
+  
+  //Render the tweets using desired array of tweets
+  renderTweets(data);
 });
