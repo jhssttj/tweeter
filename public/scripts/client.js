@@ -36,7 +36,7 @@ $(document).ready(function() {
     </header>
     <p>${tweet.content.text}</p>
     <footer> 
-    ${tweet.created_at}
+    ${new Date (tweet.created_at*1000)}
       <span>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -55,7 +55,7 @@ $(document).ready(function() {
       $('#tweets-container').append($tweet)
     }
   };
-  
+
   //Render the tweets using desired array of tweets
   renderTweets(data);
 });
