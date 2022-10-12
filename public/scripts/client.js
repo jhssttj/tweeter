@@ -57,7 +57,7 @@ $(document).ready(function() {
   };
 
   //Ajax: Put posted tweet into server once submitted
-  $( "#tweetForm" ).submit(function( event ) {
+  $( "#tweetForm" ).submit(( event ) => {
     event.preventDefault();
     const newTweet = $('#tweetForm').serialize();
     let tweetLength = $(this).find('textarea').val().length;
@@ -81,5 +81,6 @@ $(document).ready(function() {
     .catch((error) => {
       console.log ('ERROR:', error);
     })
+    $(this).find('textarea').val('');
   }); 
 });
