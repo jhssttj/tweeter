@@ -10,7 +10,7 @@ $(document).ready(function() {
     </header>
     <p>${tweet.content.text}</p>
     <footer> 
-    ${new Date (tweet.created_at*1000)}
+    ${timeago.format(tweet.created_at)}
       <span>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
