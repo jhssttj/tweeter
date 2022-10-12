@@ -8,7 +8,7 @@ $(document).ready(function() {
       <h3>${tweet.user.name}</h3>
       <h3 class = "atName">${tweet.user.handle}</h3>
     </header>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
     <footer> 
     ${timeago.format(tweet.created_at)}
       <span>
@@ -45,6 +45,13 @@ $(document).ready(function() {
   };
 
   loadtweets();
+
+  //Function below escapes the text to prevent XSS issues
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   //Ajax: Put posted tweet into server once submitted
   $( "#tweetForm" ).submit(function( event ) {
