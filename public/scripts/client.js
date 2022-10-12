@@ -84,6 +84,7 @@ $(document).ready(function() {
       console.log ('ERROR:', error);
     })
     $(this).find('textarea').val('');
+    $(this).find('.counter').val(140);
   }); 
 
   //Ajax: Click on icon slides the new tweer header up and down
