@@ -1,15 +1,18 @@
+/* Adjust position of content within nav header. 
+Customize size and color of header bar */
 nav {
   display: flex;
-  width: 100%;
   justify-content: space-between;
+  width: 100%;
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
-  position: fixed;
   font-size: 1.5em;
-  
+  position: fixed;
 }
 
+/* Adjust the position of "Write a new tweet" 
+and its respective icon located on nav */
 nav Span {
   display: flex;
   flex-direction: column;
@@ -18,19 +21,23 @@ nav Span {
   margin: 1.5em;
 }
 
-.NavTitle {
-  font-family: 'Bungee', cursive;
-}
-
+/* Change color of the icon for writing new tweet */
 .fa-angles-down {
 color: red;
 }
 
+/* Change color of the icon for writing new tweet when hovering */
 .fa-angles-down:hover {
   color:blue;
   cursor: pointer;
 }
 
+/* Change main tweeter font on nav */
+.NavTitle {
+  font-family: 'Bungee', cursive;
+}
+
+/* Custom setting for the button that scrolls back to top of page */
 #scrollToTop {
   position: fixed;
   right: 1%;
@@ -45,6 +52,7 @@ color: red;
   cursor: pointer;
 }
 
+/* Custom setting for the button that scrolls back to top of page when hovering */
 #scrollToTop:hover {
   background:blue;
 }

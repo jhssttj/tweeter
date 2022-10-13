@@ -31,10 +31,11 @@
   </head>
 
   <body>
+    <!-- Button to scroll to top of webpage -->
     <button id = "scrollToTop">
       <i class="fa-solid fa-circle-arrow-up"></i>
     </button>
-    <!-- Top nav bar (fixed) -->
+    <!-- Top nav bar with icon to open tweet form -->
     <nav>
       <span class = "NavTitle">tweeter</span>
       <span> Write a new tweet
@@ -56,11 +57,11 @@
       <!--The section below is the form for creating new tweets-->
       <section class="new-tweet" id = "scrollTop">
         <span class = "error" id = "error_empty">
-          <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+          <i class="fas fa-exclamation-triangle"></i>
           Cannot post: Post cannot be empty
         </span>
         <span class = "error" id = "error_over">
-          <i class="fas fa-exclamation-triangle" style= "color: red"></i>
+          <i class="fas fa-exclamation-triangle"></i>
           Cannot post: Post exceeds 140 text limit
         </span>
         <h2>Compose Tweet</h2>
@@ -77,6 +78,5 @@
       <section id = "tweets-container"></section>
     </main>
   </body>
-  
 </html>
 
