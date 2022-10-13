@@ -64,6 +64,7 @@ main form button {
   margin: 2%;
   border: 3px solid red;
   color: red;
+  padding: 2%;
   font-weight: bold;
 }
 
