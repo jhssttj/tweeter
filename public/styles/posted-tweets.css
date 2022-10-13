@@ -15,6 +15,7 @@ article:hover {
 /* Adjust margin of what was tweeted */
 article p {
   margin: 1%;
+  word-break: break-all;
 }
 
 /* Adjust spacing and position of date and icons for posted tweet footer */
