@@ -1,3 +1,4 @@
+/* Position and layout for content within each posted tweet articles */
 article {
   display: flex;
   flex-direction: column;
@@ -6,14 +7,17 @@ article {
   border: 3px solid #545149;
 }
 
+/* Give box shadow when hovering over tweet posts */
 article:hover {
   box-shadow: 0 0 5px 5px #545149;
 }
 
+/* Adjust margin of what was tweeted */
 article p {
   margin: 1%;
 }
 
+/* Adjust spacing and position of date and icons for posted tweet footer */
 article footer {
   display: flex;
   justify-content: space-between;
@@ -24,21 +28,24 @@ article footer {
   font-size: 0.75em;
 }
 
+/* Adjust spacing within icons located on footer */
 article footer span {
   width: 10%;
   display: flex;
   justify-content: space-around;
 }
 
+/* Adjust so icon in posted tweets change when hovering */
+article footer span i:hover {
+  color:red;
+  cursor: pointer;
+}
+
+/* Change font and position for handlers Id on posted tweets */
 article header h3.atName {
   display: flex;
   justify-content: flex-end;
   font-weight: normal;
   width: 100%;
   margin: 1%;
-}
-
-article footer span i:hover {
-  color:red;
-  cursor: pointer;
 }

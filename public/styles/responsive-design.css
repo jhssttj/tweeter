@@ -1,10 +1,13 @@
+/* Adjust setting for desktop screens */
 @media only screen and (min-width: 1024px) {
+  /* Move profile section to the left */
   .profile-header {
     float: left;
     width: 46%;
     margin: 200px 2% 0 2%
   }
 
+  /* Move new tweet section and posted tweets to the right */
   .container {
     float: right;
     width: 46%;
@@ -12,7 +15,9 @@
   }
 }
 
+/* Adjust setting for mobile screens */
 @media only screen and (max-width: 420px) {
+  /* Adjust font and position of nav panel */
  nav {
   display: flex;
   flex-direction: column;
@@ -20,41 +25,45 @@
   font-size: 100%;
  } 
 
+ /* Adjust content within nav to fit tighter */
  nav span {
   margin: 0;
  }
 
+ /* Reduce font size to fit more content */
  h3 {
   font-size: 50%;
  }
 
+ /* Adjust posted tweets to have spacing between each others */
  article {
   display: flex;
   justify-content: space-between;
  }
 
+ /* Adjust font and position of header content within article (Name, pic and handle Id) */
  article header {
   font-size: 1.5em;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  
  }
 
+ /* Adjust size of profile image on posted tweet article */
  header.PostedTweets img {
   width: 20%;
  }
 
+ /* Adjust so icon on posted tweet fotter fits within the main article box */
  article footer span {
   width: 33%;
   float: right;
  }
 
+ /* Scale size of icon that scrolls you back to the top */
  #scrollToTop {
   width: 50px;
   height: 50px;
   font-size: 1em;
  }
-
-
 }

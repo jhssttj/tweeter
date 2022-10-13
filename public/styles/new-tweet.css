@@ -17,31 +17,35 @@ main form  {
   justify-content: space-between;
 }
 
+/* Adjust margin and position of new tweet form and contents */
 main section h2 {
-  width:100%;
   display: flex;
   justify-content: flex-start;
+  width:100%;
 }
 
+/* Adjust textarea interface for new tweets */
 main form textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  width:100%;
   border: none;
   border-bottom: 3px solid #545149;
   background-color: transparent;
-  width:100%;
 }
 
+/* Adjust content position and font within form section */
 main form div {
   display: flex;
-  width:100%;
-  margin: 10px;
   align-items: center;
   justify-content: space-between;
+  width:100%;
+  margin: 10px;
   font-family: 'Bungee', cursive;
 }
 
+/* Custom setting for button to submit new tweets */
 main form button {
   border:none;
   background-color:#4056A1;
@@ -50,10 +54,12 @@ main form button {
   text-align: center;
 }
 
+/* Change color of error message when posting invalid tweets */
 .warningColor {
   color: red;
 }
 
+/* Change setting of error message when posting invalid tweets */
 .error {
   margin: 2%;
   border: 3px solid red;

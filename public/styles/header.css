@@ -1,19 +1,23 @@
+/*  Adjust position of content within header for profile section. 
+Customize size and color of profile section  */
 header {
   display: flex;
-  height: 550px;
-  width: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 550px;
+  width: 100%;
   background-color: orange;
   background-image: url("/images/profileBG.jpg");
   background-size: cover;
 }
 
+/* Adjust margin of image so profile section isn't covered by nav bar */
 header img {
   margin-top: 120px;
 }
 
+/* Adjust size of profile image located on posted tweets */
 header.PostedTweets img {
   margin: 1%;
   width:15%;
@@ -21,6 +25,7 @@ header.PostedTweets img {
   background: none;
 }
 
+/* Adjust position and content of header within posted tweet article */
 header.PostedTweets {
   display: flex;
   justify-content: flex-start;
