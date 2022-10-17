@@ -23,9 +23,11 @@ $(document).ready(function() {
   
   //Function to take array of tweets and render them using the createTweetElement function
   const renderTweets = function(tweets) {
+    const container = $("#tweets-container")
+    container.empty();
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      $('#tweets-container').prepend($tweet);
+      container.prepend($tweet);
     }
   };
 
@@ -70,7 +72,6 @@ $(document).ready(function() {
       data: newTweet
     })
     .then(() => {
-      $("#tweets-container").empty();
       loadtweets();
     })
     .catch((error) => {
